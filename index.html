@@ -2,39 +2,32 @@
 <html>
 
   <head>
-    <link rel="stylesheet" type="text/css" href="./MKS14-twittler/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <script src='tweet_javascript.js'></script>
   </head>
 
 
   <body>
 
-    <header class="header"> </header>
+    <header class="header"> 
+      <img src='https://www.fccrsnc.org/Images/twitter_logo2.jpg' class='logo'/>
+    </header>
 
-    <div class='sidebar'> 
+    <img class='profile_pic' src='https://pbs.twimg.com/media/Bl21w2cCIAAoXTa.jpg'>
+
+    <div class='button_bar'> 
+    <button class='home'>Home Feed</button>
     <button class='update_button'>Update Feed</button> 
+    <button class='friends'></select>
     </div>
-
     <div class='container'>
-      <script>
-
-        $(document).ready(function(){
-          var $body = $('body');
-          $body.html('');
-
-          var index = streams.home.length - 1;
-          while(index >= 0){
-            var tweet = streams.home[index];
-            var $tweet = $('<div></div>');
-            $tweet.text('@' + tweet.user + ': ' + tweet.message);
-            $tweet.appendTo($body);
-            index -= 1;
-          }
-
-        });
-
-      </script> 
+      <div class='feed'></div>
+   
+      <div class='friends_panel'>
+        <p>YOUR FRIENDS<br></p>
+      </div>
     </div>
 
   </body>
