@@ -27,11 +27,11 @@ var randomElement = function(array){
 };
 
 // random tweet generator
-var opening = ['just', '', '', '', '', 'ask me how I', 'completely', 'nearly', 'happily', 'vigorously', 'last night I', 'the president', 'that wizard', 'a ninja', 'a seedy old man'];
-var verbs = ['drank', 'drunk', 'deployed', 'got', 'developed', 'built', 'invented', 'experienced', 'fought off', 'scratched', 'enjoyed', 'developed', 'consumed', 'debunked', 'drugged', 'doped', 'made', 'sniffed', 'saw'];
+var opening = ['just', '', '', '', '', 'ask me how I', 'completely', 'all sexy like, I ', 'happily', 'vigorously', 'last night I', 'yo mama', 'that wizard', 'a ninja', 'a seedy old man'];
+var verbs = ['drank', 'drunk', 'deployed', 'got', 'karate kicked', 'chased', 'invented', 'spent six hours playing with', 'fought off', 'scratched', 'enjoyed', 'developed', 'consumed', 'debunked', 'drugged', 'doped', 'made', 'sniffed', 'saw'];
 var objects = ['my owners', 'your', 'the', 'a', 'my', 'an entire', 'this', 'dat', 'the', 'the big', 'a new form of'];
-var nouns = ['cat', 'koolaid', 'system', 'city', 'milk', 'cloud', 'potato', 'cat nip', 'way of life', 'belief system', 'security system', 'bad decision', 'future', 'life', 'pony', 'mind'];
-var tags = ['#powerpawz', '#burningman', '#doyouevenlift', '#no_regrets', '#furreal', '#THUGLYFE', '#ballin', '#omg', '#yolo', '#magic', '', '', '', ''];
+var nouns = ['cat', 'koolaid', 'yarnball', 'city', 'milk', 'hairball', 'potato', 'cat nip', 'way of life', 'furniture', '-OH TAIL', 'bad decision', 'future', 'lyfe', 'pony', 'mind'];
+var tags = ['#dem_kitties_tho', '#burningman', '#doyouevenlift', '#how_ya_like_me_meow', '#furreal', '#THUGLYFE', '#ballin', '#omg', '#yolo', '#magic', '', '', '', ''];
 
 var randomMessage = function(){
   return [randomElement(opening), randomElement(verbs), randomElement(objects), randomElement(nouns), randomElement(tags)].join(' ');

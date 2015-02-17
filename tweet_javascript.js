@@ -4,26 +4,26 @@ $(document).ready(
   function() {
     var $feed = $('.feed');
     var filter;
-    // feed.html('');
 
-    var index = streams.home.length - 1;
-    while(index >= 0){
+    var index = 0;
+
+    while(index <= streams.home.length-1){
       var tweet = streams.home[index];
       var $tweet = $('<div></div>');
-      var timestamp = tweet.created_at
+      var timestamp = moment(tweet.created_at).startOf().fromNow();
       $tweet.text('@' + tweet.user + ' : ' + tweet.message + '\n' + timestamp);
       $tweet.prependTo($feed);
-      index -= 1;
+      index += 1;
     }
-    streams.home =[] 
+    //streams.home =[] 
   
   var users = Object.keys(streams.users) 
   for (var index=0; index<users.length; index++) {
     console.log(users[index]);
-    $('.friends_panel').append('<a class="'+users[index]+'">' + users[index] + '<br></a>');
+    $('.friends_panel').append('<a class="'+users[index]+'">' + '@' + users[index] + '<br></a>');
   }
 
-  // $('.username').appendTo('username');
+  $('.username').text('@' + tweet.user);
 
   $('.update_button').on('click', function(){
 
@@ -38,17 +38,19 @@ $(document).ready(
 
     var $feed = $('.feed');
     console.log("filter:" + tweetFilter);
-    var index = tweets.length-1;
+    var index = 0 //tweets.length-1;
 
-    while(index >= 0){
+    while(index <= tweets.length-1){
       var tweet = tweets[index];
       var $tweet = $('<div></div>');
       $($tweet).attr('user', tweet.user);
-      $tweet.text('@' + tweet.user + ': ' + tweet.message + '\n' + tweet.created_at);
+
+      var timestamp = moment(tweet.created_at).startOf().fromNow();
+      // var timestamp = tweet.created_at;
+      $tweet.text('@' + tweet.user + ': ' + tweet.message + timestamp);
       $tweet.prependTo($feed);
-      index -= 1;
+      index += 1;
     }
-    streams.home =[]
   })
 
   $('button.home').on('click', function(){
@@ -62,9 +64,6 @@ $(document).ready(
     filter = $(this).attr('class');
     $('.update_button').trigger('click')
   })
-
-//use select tag to hold all the users
-//on click of user 
 
 }); 
 

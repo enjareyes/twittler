@@ -38,11 +38,14 @@
   height: 16vw;
 }
 
-.username {
-  position: absolute;
-  top: 250px;
-  left: 10px;
+div > .username {
+  padding: 5px;
+  margin-top: 150px;
+  width: 20%;
+  float: left;
+  left: 20px;
   font-size: 30px;
+  font-family: Arial;
   color: black;
 }
 
@@ -73,13 +76,13 @@
 }
 
 .friends_panel {
-  padding: 5px;
-  width: 20%;
+  padding: 10px;
+  width: 18%;
   background-color: white;
   min-height: 550px;
   position: absolute;
   top: 250px;
-  right: 20px;
+  right: 30px;
 }
 
 .friends_panel > p {
