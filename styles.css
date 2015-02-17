@@ -49,6 +49,16 @@ div > .username {
   color: black;
 }
 
+input {
+  margin-left: 4%;
+  margin-bottom: 10px;
+  height: 40px;
+  border: 1px solid #00aced;;
+  width: 50%;
+  font-size: 16px;
+  color: gray;
+}
+
 .container {
   color: #66757f;
   clear: left;
@@ -59,7 +69,7 @@ div > .username {
 }
 
 .feed {
-  font-size: 23px;
+  font-size: 20px;
   width: 50%;
   margin: auto;
   background-color: white;
@@ -67,12 +77,13 @@ div > .username {
   min-height: 450px;
 }
 
-.update_button, .friends, .home{
+.update_button, .addTweet, .home{
   font-size: 18px;
   color: #00aced;
   border: none;
   font-family: Arial;
   background-color: white;
+  margin: auto;
 }
 
 .friends_panel {
@@ -107,9 +118,15 @@ div > .username {
   text-decoration: underline;
 }
 
+.feed > div > div {
+  font-size: 13px;
+  color: #909090 ;
+  margin-left: 5px;
+}
 
-
-
+.feed > div {
+  margin-top: 5px;
+}
 
 
 
