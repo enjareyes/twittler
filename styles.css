@@ -38,7 +38,16 @@
   height: 16vw;
 }
 
+.username {
+  position: absolute;
+  top: 250px;
+  left: 10px;
+  font-size: 30px;
+  color: black;
+}
+
 .container {
+  color: #66757f;
   clear: left;
   background-color: #f5f8fa;
   width: 99%;

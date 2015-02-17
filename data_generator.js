@@ -7,10 +7,10 @@
 window.streams = {};
 streams.home = [];
 streams.users = {};
-streams.users.shawndrost = [];
-streams.users.sharksforcheap = [];
-streams.users.mracus = [];
-streams.users.douglascalhoun = [];
+streams.users.grumpykat = [];
+streams.users.datkitty = [];
+streams.users.madamfancyfeast = [];
+streams.users.whiskurz = [];
 window.users = Object.keys(streams.users);
 
 // utility function for adding tweets to our data structures
@@ -27,11 +27,11 @@ var randomElement = function(array){
 };
 
 // random tweet generator
-var opening = ['just', '', '', '', '', 'ask me how i', 'completely', 'nearly', 'productively', 'efficiently', 'last night i', 'the president', 'that wizard', 'a ninja', 'a seedy old man'];
-var verbs = ['drank', 'drunk', 'deployed', 'got', 'developed', 'built', 'invented', 'experienced', 'fought off', 'hardened', 'enjoyed', 'developed', 'consumed', 'debunked', 'drugged', 'doped', 'made', 'wrote', 'saw'];
-var objects = ['my', 'your', 'the', 'a', 'my', 'an entire', 'this', 'that', 'the', 'the big', 'a new form of'];
-var nouns = ['cat', 'koolaid', 'system', 'city', 'worm', 'cloud', 'potato', 'money', 'way of life', 'belief system', 'security system', 'bad decision', 'future', 'life', 'pony', 'mind'];
-var tags = ['#techlife', '#burningman', '#sup', 'but only i know how', 'for real', '#THUGLYFE', '#ballin', '#omg', '#yolo', '#magic', '', '', '', ''];
+var opening = ['just', '', '', '', '', 'ask me how I', 'completely', 'nearly', 'happily', 'vigorously', 'last night I', 'the president', 'that wizard', 'a ninja', 'a seedy old man'];
+var verbs = ['drank', 'drunk', 'deployed', 'got', 'developed', 'built', 'invented', 'experienced', 'fought off', 'scratched', 'enjoyed', 'developed', 'consumed', 'debunked', 'drugged', 'doped', 'made', 'sniffed', 'saw'];
+var objects = ['my owners', 'your', 'the', 'a', 'my', 'an entire', 'this', 'dat', 'the', 'the big', 'a new form of'];
+var nouns = ['cat', 'koolaid', 'system', 'city', 'milk', 'cloud', 'potato', 'cat nip', 'way of life', 'belief system', 'security system', 'bad decision', 'future', 'life', 'pony', 'mind'];
+var tags = ['#powerpawz', '#burningman', '#doyouevenlift', '#no_regrets', '#furreal', '#THUGLYFE', '#ballin', '#omg', '#yolo', '#magic', '', '', '', ''];
 
 var randomMessage = function(){
   return [randomElement(opening), randomElement(verbs), randomElement(objects), randomElement(nouns), randomElement(tags)].join(' ');

@@ -23,6 +23,7 @@ $(document).ready(
     $('.friends_panel').append('<a class="'+users[index]+'">' + users[index] + '<br></a>');
   }
 
+  // $('.username').appendTo('username');
 
   $('.update_button').on('click', function(){
 
@@ -38,6 +39,7 @@ $(document).ready(
     var $feed = $('.feed');
     console.log("filter:" + tweetFilter);
     var index = tweets.length-1;
+
     while(index >= 0){
       var tweet = tweets[index];
       var $tweet = $('<div></div>');
@@ -51,12 +53,14 @@ $(document).ready(
 
   $('button.home').on('click', function(){
     filter = undefined;
+    $('.update_button').trigger('click')
   })
 
 
   $('.friends_panel').on('click', 'a', function(){
     $('.feed').text(" ");
     filter = $(this).attr('class');
+    $('.update_button').trigger('click')
   })
 
 //use select tag to hold all the users
