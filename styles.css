@@ -40,11 +40,11 @@
 
 div > .username {
   padding: 5px;
-  margin-top: 150px;
+  margin-top: 130px;
   width: 20%;
   float: left;
   left: 20px;
-  font-size: 30px;
+  font-size: 25px;
   font-family: Arial;
   color: black;
 }

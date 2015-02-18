@@ -65,8 +65,6 @@ $(document).ready(
     }
   })
 
-  //need to create placeholder it doesn't add duplicate tweets w/ the the new tweets, but starts from saved index.
-
 
   $('button.home').on('click', function(){
     $('.tweetbox').show();
