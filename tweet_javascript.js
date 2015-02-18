@@ -1,11 +1,11 @@
 
 $(document).ready(
-
   function() {
+    var placeholder = {home: 0}
     var $feed = $('.feed');
     var filter;
 
-    var index = 0;
+    var index = placeholder['home'];
 
     while(index <= streams.home.length-1){
       var tweet = streams.home[index];
@@ -17,27 +17,33 @@ $(document).ready(
       $tweetStamp.appendTo($tweet);
       $tweet.prependTo($feed);
       index += 1;
+      placeholder['home'] = index; //update placeholder
     }
+
   
   var users = Object.keys(streams.users) 
   for (var index=0; index<users.length; index++) {
     $('.friends_panel').append('<a class="'+users[index]+'">' + '@' + users[index] + '<br></a>');
+    placeholder[users[index]] = 0;
   }
 
   $('.username').text('@' + tweet.user);
 
+  
   $('.update_button').on('click', function(){
+    var index;
     var tweetFilter;
     var tweets = [];
 
     if (filter === undefined) {
       tweets = streams.home;
+      index = placeholder['home'];
     } else {
       tweets = streams.users[filter];
+      index = placeholder[filter];
     }
 
     var $feed = $('.feed');
-    var index = 0 
 
     while(index <= tweets.length-1){
       var tweet = tweets[index];
@@ -50,16 +56,26 @@ $(document).ready(
       $tweetStamp.appendTo($tweet);
       $tweet.prependTo($feed);
       index += 1;
+
+      if (filter === undefined) {
+        placeholder['home'] = index;
+      } else {
+        placeholder[filter] = index;
+      }
     }
   })
 
+  //need to create placeholder it doesn't add duplicate tweets w/ the the new tweets, but starts from saved index.
+
+
   $('button.home').on('click', function(){
+    $('.tweetbox').show();
     filter = undefined;
     $('.update_button').trigger('click')
   })
 
-
   $('.friends_panel').on('click', 'a', function(){
+    $('.tweetbox').hide();
     $('.feed').text(" ");
     filter = $(this).attr('class');
     $('.update_button').trigger('click')
