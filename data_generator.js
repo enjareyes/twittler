@@ -8,7 +8,7 @@ window.streams = {};
 streams.home = [];
 streams.users = {};
 streams.users.grumpykat = [];
-streams.users.datkitty = [];
+streams.users.maru = [];
 streams.users.madamfancyfeast = [];
 streams.users.whiskurz = [];
 window.users = Object.keys(streams.users);
@@ -30,11 +30,11 @@ var randomElement = function(array){
 };
 
 // random tweet generator
-var opening = ['just', '', '', '', '', 'ask me how I', 'completely', 'all sexy like, I ', 'happily', 'vigorously', 'last night I', 'yo mama', 'that wizard', 'a ninja', 'a seedy old man'];
-var verbs = ['drank', 'drunk', 'deployed', 'got', 'karate kicked', 'chased', 'invented', 'spent six hours playing with', 'fought off', 'scratched', 'enjoyed', 'developed', 'consumed', 'debunked', 'drugged', 'doped', 'made', 'sniffed', 'saw'];
-var objects = ['my owners', 'your', 'the', 'a', 'my', 'an entire', 'this', 'dat', 'the', 'the big', 'a new form of'];
-var nouns = ['cat', 'koolaid', 'yarnball', 'city', 'milk', 'hairball', 'potato', 'cat nip', 'way of life', 'furniture', '-OH TAIL', 'bad decision', 'future', 'lyfe', 'pony', 'mind'];
-var tags = ['#dem_kitties_tho', '#burningman', '#doyouevenlift', '#how_ya_like_me_meow', '#furreal', '#THUGLYFE', '#ballin', '#omg', '#yolo', '#magic', '', '', '', ''];
+var opening = ['just', '', '', '', '', 'ask me how I', 'completely', 'all sexy like, I ', 'happily', 'vigorously', 'last night I', 'yo mama', 'that wizard', 'a ninja', 'pretty sure the neighbors dog just'];
+var verbs = ['drank', 'drunk', 'rolled all over', 'got', 'karate kicked', 'chased', 'invented', 'spent six hours playing with', 'fought off', 'scratched', 'enjoyed', 'developed', 'consumed', 'debunked', 'drugged', 'doped', 'made', 'sniffed', 'saw'];
+var objects = ['my owners', 'your', 'the', 'a', 'my', 'an entire', 'this', 'that', 'the', 'the big', 'a new form of'];
+var nouns = ['cat', 'koolaid', 'yarnball', 'city', 'milk', 'hairball', 'potato', 'cat nip', 'way of life', 'furniture', 'box', 'bad decision', 'future', 'awesome lazer beam on wall O_O', 'pony', 'mind'];
+var tags = ['#dem_kitties_tho', '#burningman', '#doyouevenlift', '#how_ya_like_me_meow', '#furreal', '#THUGLYFE', '#ballin', '#hopeyoulikefur', '#yolo', '#magic', '', '', '', ''];
 
 var randomMessage = function(){
   return [randomElement(opening), randomElement(verbs), randomElement(objects), randomElement(nouns), randomElement(tags)].join(' ');
